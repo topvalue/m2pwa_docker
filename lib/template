@@ -1,8 +1,8 @@
 #!/bin/bash
 git init -qqq
-git remote add origin https://github.com/topvalue/m2pwa_docker
+git remote add origin https://github.com/markshust/docker-magento
 git fetch origin -qqq
-git checkout origin/main -- compose
+git checkout origin/master -- compose
 mv compose/* ./
 mv compose/.gitignore ./
 mv compose/.vscode ./

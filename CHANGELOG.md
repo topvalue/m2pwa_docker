@@ -4,9 +4,49 @@ All notable changes to this project will be documented in this file.
 The format is based on [Keep a Changelog](http://keepachangelog.com/en/1.0.0/)
 and this project adheres to [Semantic Versioning](http://semver.org/spec/v2.0.0.html).
 
-## [Unreleased]
+## [42.0.0] - 2022-04-14
 
-- PHP image `8.1-fpm-develop` now available for testing purposes.
+This release brings streamlined PHP Docker images (saving 300MB on previous images), a brand new PHP 8.1 image with full support for Magento 2.4.4, a proper Elasticsearch health check during setup, and ability to detect memory assigned to Docker on startup (which will prevent failed installations). Elasticsearch, Redis & RabbitMQ Docker images have also all been updated to their recently supported Magento versions.
+
+### Added
+- New Docker image for PHP 8.1 [903f9867](https://github.com/markshust/docker-magento/commit/903f9867aa130100267290feaa03b1b48b157337).
+- New Docker image for Elasticsearch 7.16 [f70a1565](https://github.com/markshust/docker-magento/commit/f70a1565bddd56a3abe8df52d4122dbcdc85d98a).
+- New Docker image for RabbitMQ 3.9 [7711365c](https://github.com/markshust/docker-magento/commit/7711365cb73aab685859e3e34fc23774937a4e2a).
+- Elasticsearch health check timeout when installing Magento [#675](https://github.com/markshust/docker-magento/pull/675).
+- Ability to detect if memory usage is too low [#527](https://github.com/markshust/docker-magento/issues/527).
+
+### Updated
+- PHP 7.4 Docker image for parity with PHP 8.1 image [481097b3](https://github.com/markshust/docker-magento/commit/481097b3f9184d19deb102b901b43af906ebb256).
+
+### Removed
+- ionCube support from PHP 7 image in order to retain Docker image parity between versions, to slim down image size, and because I no longer want to support encrypted or obfuscated code in my open source projects. Feel free to pull, fork or modify if you still need ionCube in your projects.
+
+## [41.1.0] - 2022-03-28
+
+### Fixed
+- Increased RabbitMQ sleep timeout to prevent errors on startup [#426](https://github.com/markshust/docker-magento/issues/426).
+- RabbitMQ connection issues on Windows/WSL2 [#426](https://github.com/markshust/docker-magento/issues/426).
+- Problem with elasticsearch & unexpected character [#597](https://github.com/markshust/docker-magento/issues/597).
+- Issue with extra_hosts host.docker.internal for Xdebug on Linux [#595](https://github.com/markshust/docker-magento/issues/595).
+- Reverted Xdebug/magerun code refactor which caused issues [#595](https://github.com/markshust/docker-magento/pull/545).
+- Composer auth.json auth required message shows after authenticating [#587](https://github.com/markshust/docker-magento/issues/587).
+- Failing shellchecks [08206e6d](https://github.com/markshust/docker-magento/commit/08206e6d6a48fdb3c1c3adc8f52b146609ba771c), [53d9b858](https://github.com/markshust/docker-magento/commit/53d9b8585733f8f78a5dcaedce53a83863a1b634).
+- Firefox SSL cert fails on first-time install [2695fe2e](https://github.com/markshust/docker-magento/commit/2695fe2e508098906103dd442767d50e9f6011c0).
+- Some commands including bin/xdebug not working on Windows + Docker Desktop 4.4.3 [#619](https://github.com/markshust/docker-magento/issues/619).
+
+### Updated
+- Redis 5.0 to 6.0 [6653d787](https://github.com/markshust/docker-magento/commit/6653d78722fb8d1d76cc2433a89227456e48514f).
+- `bin/setup` script so it can run completely automated [PR #633](https://github.com/markshust/docker-magento/pull/633).
+- PHP 8 image to 8.1.4, last version before tagging final release [86093b70](https://github.com/markshust/docker-magento/commit/86093b70c9ee7f0ed3c62e84460b7e53926d033c).
+
+### Added
+- `bin/stopall` script to stop all running containers [#599](https://github.com/markshust/docker-magento/pull/599).
+- New PHP image to enable WebP support in GD [PR #651](https://github.com/markshust/docker-magento/pull/651).
+- Ability to configure custom user/group ID in Nginx image [PR #658](https://github.com/markshust/docker-magento/pull/658).
+
+### Removed
+- PHP 7.3 images have been deprecated due to 7.3's EOL.
+- EXPOSE statement from PHP image (unneeded) [790e2fe0](https://github.com/markshust/docker-magento/commit/790e2fe0293feb12455d7f9ed2593aa97ad6df99).
 
 ## [41.0.2] - 2021-12-09
 

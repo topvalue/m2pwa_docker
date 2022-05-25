@@ -15,7 +15,6 @@ services:
       #- ./src/patches:/var/www/html/patches:cached
       #- ./src/var/log:/var/www/html/var/log:cached
       #- ./src/var/report:/var/www/html/var/report:cached
-      - ./src/.modman:/var/www/html/.modman:cached
 
   phpfpm:
     volumes: *appvolumes
