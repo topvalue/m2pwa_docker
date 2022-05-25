@@ -42,7 +42,7 @@ echo $(pwd)
 
 modman init
 echo "Install magento extensions.."
-# modman clone git@github.com:topvalue/m2pwa_disable2fa.git
+modman clone git@github.com:topvalue/m2pwa_disable2fa.git
 
 cd ..
 # bin/clinotty bin/magento setup:upgrade
