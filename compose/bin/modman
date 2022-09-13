@@ -43,6 +43,31 @@ echo $(pwd)
 modman init
 echo "Install magento extensions.."
 modman clone git@github.com:topvalue/m2pwa_disable2fa.git
+modman clone git@github.com:topvalue/m244_admin-actions-log.git
+modman clone git@github.com:topvalue/m244_advanced-product-reviews.git
+modman clone git@github.com:topvalue/m244_automatic-related-products.git
+modman clone git@github.com:topvalue/m244_order-attributes.git
+modman clone git@github.com:topvalue/m244_custom-registration-fields.git
+modman clone git@github.com:topvalue/m244_custom-promo-conditions.git
+modman clone git@github.com:topvalue/m244_custom-stock-status.git
+modman clone git@github.com:topvalue/m244_elastic-search.git
+modman clone git@github.com:topvalue/m244_free-gift.git
+modman clone git@github.com:topvalue/m244_generate-and-import-coupons.git
+modman clone git@github.com:topvalue/m244_improved-layered-navigation.git
+modman clone git@github.com:topvalue/m244_out-of-stock-notification.git
+modman clone git@github.com:topvalue/m244_payment-restrictions.git
+modman clone git@github.com:topvalue/m244_product-feed.git
+modman clone git@github.com:topvalue/m244_product-labels.git
+modman clone git@github.com:topvalue/m244_promo-banners.git
+modman clone git@github.com:topvalue/m244_reward-points.git
+modman clone git@github.com:topvalue/m244_shipping-restrictions.git
+modman clone git@github.com:topvalue/m244_shipping-rules.git
+modman clone git@github.com:topvalue/m244_shipping-table-rates.git
+modman clone git@github.com:topvalue/m244_social-login.git
+modman clone git@github.com:topvalue/m244_special-promotions-pro.git
+modman clone git@github.com:topvalue/m244_seo-toolkit.git
+modman clone git@github.com:topvalue/m244_smtp.git
+modman clone git@github.com:topvalue/m244_sms-notification.git
 
 cd ..
 # bin/clinotty bin/magento setup:upgrade
