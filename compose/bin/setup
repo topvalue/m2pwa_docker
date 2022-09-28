@@ -87,6 +87,8 @@ bin/clinotty bin/magento setup:static-content:deploy -f
 echo "Re-indexing with Elasticsearch..."
 bin/clinotty bin/magento indexer:reindex
 
+bin/modman
+
 echo "Setting basic URL and generating SSL certificate..."
 bin/setup-domain "${DOMAIN}"
 
