@@ -47,7 +47,7 @@ modman clone git@github.com:topvalue/m244_admin-actions-log.git
 modman clone git@github.com:topvalue/m244_advanced-product-reviews.git
 modman clone git@github.com:topvalue/m244_automatic-related-products.git
 modman clone git@github.com:topvalue/m244_order-attributes.git
-modman clone git@github.com:topvalue/m244_custom-registration-fields.git
+#modman clone git@github.com:topvalue/m244_custom-registration-fields.git
 modman clone git@github.com:topvalue/m244_custom-promo-conditions.git
 modman clone git@github.com:topvalue/m244_custom-stock-status.git
 modman clone git@github.com:topvalue/m244_elastic-search.git
