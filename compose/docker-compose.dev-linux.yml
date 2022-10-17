@@ -5,6 +5,10 @@ services:
     volumes: &appvolumes
       - ./src/nginx.conf.sample:/var/www/html/nginx.conf:cached
       - ./src:/var/www/html:cached
+      - ./src/.modman:/var/www/html/.modman:cached
+      # SSH-KEY for GitHub (used for webhook)
+      #- /home/gaow/.ssh:/var/www/.ssh:delegated
+      #- ~/.ssh:/var/www/.ssh:delegated
 
   phpfpm:
     volumes: *appvolumes
