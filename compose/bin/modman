@@ -71,6 +71,7 @@ modman clone git@github.com:topvalue/m244_sms-notification.git
 modman clone git@github.com:topvalue/m244_custom-api.git
 ## webhook for staging
 #modman clone git@github.com:topvalue/m244_webhook.git
+modman clone git@github.com:topvalue/m244_city-region.git
 
 cd ..
 # bin/clinotty bin/magento setup:upgrade
