@@ -73,6 +73,7 @@ modman clone git@github.com:topvalue/m244_custom-api.git
 #modman clone git@github.com:topvalue/m244_webhook.git
 modman clone git@github.com:topvalue/m244_city-region.git
 modman clone git@github.com:topvalue/m244_omise.git
+#modman clone git@github.com:topvalue/m244_netsuite.git
 
 cd ..
 # bin/clinotty bin/magento setup:upgrade
