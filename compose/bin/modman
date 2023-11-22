@@ -76,6 +76,7 @@ modman clone git@github.com:topvalue/m244_omise.git
 #modman clone git@github.com:topvalue/m244_netsuite.git
 modman clone git@github.com:topvalue/m244_asynchronous-reindexing.git
 modman clone git@github.com:topvalue/m244_tax_address.git
+modman clone git@github.com:topvalue/m244_white_list.git
 
 cd ..
 # bin/clinotty bin/magento setup:upgrade
