@@ -158,7 +158,7 @@ cd $_
 curl -s https://raw.githubusercontent.com/topvalue/m2pwa_docker/main/lib/template | bash
 
 # Download the version of Magento you want to use with:
-bin/download 2.4.4
+bin/download 2.4.4-p10
 
 # or for Magento core development:
 # docker-compose -f docker-compose.yml up -d
